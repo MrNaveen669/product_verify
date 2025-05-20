@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Herbaras - Product Authentication</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="navbar-container">
+        <div class="navbar-brand">Herbaras</div>
+
+        <div class="hamburger" id="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        <ul class="navbar-links" id="navbarLinks">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" >About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Main Section -->
+    <section class="main-section">
+      <div class="container two-column">
+        <!-- Left Column: Vision -->
+        <div class="left-column">
+          <h1 class="vision-heading">Vision</h1>
+          <p class="vision-text">
+            At Herbaras, we envision a world where health and well-being are
+            harmoniously achieved through the gift of nature. By blending
+            ancient herbal wisdom with modern science, we strive to deliver
+            premium, sustainable solutions that not only nourish the body but
+            also nurture the planet—empowering individuals to live healthier,
+            more vibrant lives.
+          </p>
+        </div>
+
+        <!-- Right Column: Verification Form -->
+        <div class="right-column">
+          <h2>Verify Your Product</h2>
+          <form id="verification-form">
+            <div class="form-group">
+              <label for="uid">Enter Product UID</label>
+              <input
+                type="text"
+                id="uid"
+                name="uid"
+                placeholder="Enter UID"
+                required
+              />
+            </div>
+            <div class="verify-button-wrapper">
+              <button type="submit" class="btn btn-primary">
+                Verify Product
+              </button>
+            </div>
+          </form>
+
+          <!-- Success Result -->
+          <div id="result-container" class="hidden">
+            <div id="result-success" class="result-box success hidden">
+              <div class="icon" style="font-size: 48px">✅</div>
+              <h3>Authentic Product</h3>
+              <div class="product-details">
+                <p>
+                  <strong>Product Name:</strong> <span id="product-name"></span>
+                </p>
+                <p><strong>UID:</strong> <span id="product-uid"></span></p>
+                <p>
+                  <strong>Description:</strong>
+                  <span id="product-description"></span>
+                </p>
+              </div>
+            </div>
+
+            <!-- Error Result -->
+            <div id="result-error" class="result-box error hidden">
+              <div class="icon">❌</div>
+              <h3>Invalid UID</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-brand">Herbaras</div>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        <div class="footer-socials">
+          <!-- Facebook -->
+          <a
+            href="https://facebook.com/yourpage"
+            target="_blank"
+            aria-label="Facebook"
+            rel="noopener noreferrer"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="#ffffff"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M22.675 0h-21.35C.59 0 0 .593 0 1.326v21.348C0 23.406.59 24 1.325 24h11.494v-9.294H9.691v-3.622h3.128V8.413c0-3.1 1.894-4.788 4.66-4.788 1.325 0 2.466.099 2.797.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.588l-.467 3.622h-3.121V24h6.116C23.406 24 24 23.406 24 22.674V1.326C24 .593 23.406 0 22.675 0z"
+              />
+            </svg>
+          </a>
+
+          <!-- Twitter -->
+          <a
+            href="https://twitter.com/yourpage"
+            target="_blank"
+            aria-label="Twitter"
+            rel="noopener noreferrer"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="#ffffff"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M24 4.557a9.83 9.83 0 01-2.828.775 4.932 4.932 0 002.165-2.724 9.864 9.864 0 01-3.127 1.196 4.916 4.916 0 00-8.37 4.482A13.94 13.94 0 011.671 3.149 4.916 4.916 0 003.195 9.86a4.9 4.9 0 01-2.228-.616v.062a4.917 4.917 0 003.946 4.814 4.903 4.903 0 01-2.224.084 4.919 4.919 0 004.588 3.417 9.865 9.865 0 01-6.102 2.105c-.396 0-.787-.023-1.17-.069a13.945 13.945 0 007.557 2.212c9.054 0 14.001-7.502 14.001-14.002 0-.213-.005-.425-.014-.636A10.012 10.012 0 0024 4.557z"
+              />
+            </svg>
+          </a>
+
+          <!-- Instagram -->
+          <a
+            href="https://instagram.com/yourpage"
+            target="_blank"
+            aria-label="Instagram"
+            rel="noopener noreferrer"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="#ffffff"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.345 3.608 1.32.974.974 1.257 2.242 1.32 3.608.058 1.266.069 1.645.069 4.85s-.012 3.584-.07 4.85c-.062 1.366-.345 2.633-1.32 3.608-.974.975-2.242 1.257-3.608 1.32-1.266.058-1.645.069-4.85.069s-3.584-.012-4.85-.07c-1.366-.062-2.633-.345-3.608-1.32-.975-.974-1.257-2.242-1.32-3.608C2.175 15.647 2.163 15.268 2.163 12s.012-3.584.07-4.85c.062-1.366.345-2.633 1.32-3.608C4.527 2.578 5.795 2.295 7.16 2.233 8.426 2.175 8.805 2.163 12 2.163zm0-2.163C8.736 0 8.332.012 7.052.07 5.77.127 4.562.438 3.508 1.491 2.455 2.545 2.144 3.753 2.086 5.035.012 5.237 0 8.736 0 12c0 3.264.012 6.763.07 7.945.058 1.282.37 2.49 1.423 3.543 1.054 1.054 2.262 1.365 3.544 1.423C8.332 23.988 8.736 24 12 24c3.264 0 6.763-.012 7.945-.07 1.282-.058 2.49-.37 3.543-1.423 1.054-1.053 1.365-2.261 1.423-3.543.058-1.282.07-4.681.07-7.945 0-3.264-.012-6.763-.07-7.945-.058-1.282-.37-2.49-1.423-3.543C20.49.438 19.282.127 18 .07 16.718.012 16.314 0 12 0z"
+              />
+              <path
+                d="M12 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zm0 10.162a3.999 3.999 0 110-7.998 3.999 3.999 0 010 7.998z"
+              />
+              <circle cx="18.406" cy="5.594" r="1.44" />
+            </svg>
+          </a>
+
+          <!-- LinkedIn -->
+          <a
+            href="https://linkedin.com/yourpage"
+            target="_blank"
+            aria-label="LinkedIn"
+            rel="noopener noreferrer"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="#ffffff"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M20.447 20.452h-3.554v-5.569c0-1.327-.026-3.037-1.851-3.037-1.851 0-2.134 1.445-2.134 2.938v5.668H9.358V9h3.414v1.561h.047c.476-.9 1.637-1.85 3.37-1.85 3.605 0 4.271 2.373 4.271 5.455v6.286zM5.337 7.433a2.07 2.07 0 110-4.139 2.07 2.07 0 010 4.139zm1.777 13.019H3.56V9h3.554v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.726v20.547C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.274V1.726C24 .774 23.2 0 22.225 0z"
+              />
+            </svg>
+          </a>
+        </div>
+        <p class="footer-copy">&copy; 2025 Herbaras. All rights reserved.</p>
+        <a href="admin/login.php" class="admin-link">Admin Login</a>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
