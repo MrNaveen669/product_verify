@@ -30,30 +30,11 @@ Import the provided product_data.sql into your MySQL server.
 
 Update your db.php file with correct DB credentials.
 
-php
-Copy code
 // db.php
 $host = "localhost";
 $user = "root";
 $pass = "";
 $dbname = "your_db_name";
-$conn = mysqli_connect($host, $user, $pass, $dbname);
-
----
-
-🛠️ Set Up Database
-
-Import the provided product_data.sql into your MySQL server.
-
-Update your db.php file with correct DB credentials.
-
-php
-Copy code
-// db.php
-$host = "localhost";
-$user = "root";
-$pass = "";
-$dbname = "product_auth";
 $conn = mysqli_connect($host, $user, $pass, $dbname);
 
 ---
