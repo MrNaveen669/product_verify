@@ -1,63 +1,70 @@
-# 🔒 Product Authentication System
+# 🔐 Product Authentication System
 
-A powerful, full-stack solution to fight counterfeit goods by verifying products through unique QR codes. Ideal for manufacturers, rice mill owners, exporters, and retailers who want to build trust and protect their brand.
-
-![Product Verification Banner](https://your-image-link.com/banner.png)
+A simple and secure **product verification platform** to help businesses fight counterfeit goods using unique product codes and QR scanning. Built with **HTML, CSS, JavaScript, PHP, and MySQL**, it's ideal for manufacturers, rice mills, and brands who want to protect their products and build trust.
 
 ---
 
 ## 🚀 Features
 
-- ✅ **Unique QR Code Generation** for every product
-- 📦 **Product Verification Portal** for customers
-- 📊 **Admin Panel** to manage product entries and uploads
-- 📁 **Bulk Upload Support** (JSON/CSV)
-- 🔍 Real-time **Verification Logs**
-- 🖼️ Clean & responsive **Frontend UI**
+- 🔎 Unique Product Code / ID Verification  
+- 📷 QR Code Integration  
+- 📁 Admin Panel for JSON/CSV Product Upload  
+- 🧾 Product Details View (Name, Batch, Description, etc.)  
+- ✅ Real-time Authenticity Check (Valid / Invalid)  
+- 📱 Mobile-friendly Design  
 
 ---
 
 ## 🛠️ Tech Stack
 
-- **Frontend**: React.js (Vite), Tailwind CSS  
-- **Backend**: Node.js, Express.js  
-- **Database**: MongoDB / MySQL  
-- **Authentication**: JWT (Optional)  
-- **QR Code**: `qrcode` / `qrcode.react`  
-- **Deployment**: Render / Vercel / Hostinger VPS
+- **Frontend**: HTML, CSS, JavaScript  
+- **Backend**: PHP  
+- **Database**: MySQL  
+- **QR Code**: Google Chart API or PHP QR Code Library  
 
 ---
 
-## 📷 Screenshots
+🛠️ Set Up Database
 
-| Product Verification | Admin Panel |
-|----------------------|-------------|
-| ![Verify](https://your-image-link.com/verify.png) | ![Admin](https://your-image-link.com/admin.png) |
+Import the provided product_data.sql into your MySQL server.
+
+Update your db.php file with correct DB credentials.
+
+php
+Copy code
+// db.php
+$host = "localhost";
+$user = "root";
+$pass = "";
+$dbname = "your_db_name";
+$conn = mysqli_connect($host, $user, $pass, $dbname);
 
 ---
 
-## 🌐 Live Demo
+🛠️ Set Up Database
 
-👉 [Visit Product Verification Portal](https://your-domain.com)  
-👉 [Admin Panel](https://your-domain.com/admin)
+Import the provided product_data.sql into your MySQL server.
+
+Update your db.php file with correct DB credentials.
+
+php
+Copy code
+// db.php
+$host = "localhost";
+$user = "root";
+$pass = "";
+$dbname = "product_auth";
+$conn = mysqli_connect($host, $user, $pass, $dbname);
 
 ---
 
-## 📦 How to Use Locally
+💡 Use Cases
+🌾 Rice Mills (Verify genuine rice bags)
 
-```bash
-# Clone the repo
-git clone https://github.com/yourusername/product-authentication.git
-cd product-authentication
+🧴 FMCG Packaging
 
-# Install dependencies
-cd backend && npm install
-cd ../frontend && npm install
+💊 Pharma & Supplements
 
-# Run backend
-cd backend
-npm run dev
+📦 Electronics & Gadgets
 
-# Run frontend
-cd ../frontend
-npm run dev
+👕 Textile & Fashion Brands
