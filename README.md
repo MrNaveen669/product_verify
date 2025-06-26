@@ -52,16 +52,16 @@ $conn = mysqli_connect($host, $user, $pass, $dbname);
 
 ---
 
-📌 Herbaras System Versions
-Version 1.0
+## 📌 Herbaras System Versions
+**Version 1.0**
 ➤ Basic product verification with no admin panel.
 
-Version 2.0
-➤ Admin panel added.
-➤ When the same UID is entered more than once, system detects it as “already used.”
-➤ Duplicate UIDs are tracked using local storage and session management.
+**Version 2.0**
+- ➤ Admin panel added.
+- ➤ When the same UID is entered more than once, system detects it as “already used.”
+- ➤ Duplicate UIDs are tracked using local storage and session management.
 
-Version 3.0
-➤ Adds is_used logic stored in the database.
-➤ UID can only be verified once. After that, system flags it as used on subsequent scans.
-➤ Enhances security and tracks product verification status persistently.
+**Version 3.0**
+- ➤ Adds is_used logic stored in the database.
+- ➤ UID can only be verified once. After that, system flags it as used on subsequent scans.
+- ➤  Enhances security and tracks product verification status persistently.
