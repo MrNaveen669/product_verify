@@ -1,0 +1,46 @@
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore environment config files
+.env
+db.php
+
+# Ignore node modules (if used for frontend tooling)
+node_modules/
+
+# Ignore composer dependencies (if using Composer)
+vendor/
+
+# Ignore log files
+*.log
+
+# Ignore backup files
+*.bak
+*.old
+*.orig
+*.swp
+*~
+
+# Ignore IDE/editor settings
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Ignore uploads or temporary QR code images (if dynamically generated)
+uploads/
+tmp/
+qrcodes/
+
+# Ignore SQL exports or imports (if sensitive)
+*.sql
+*.zip
+
+# Ignore session and cache data
+sessions/
+cache/
+
+# Optional: ignore compiled JS/CSS if using a build process
+/public/js/build/
+/public/css/build/
